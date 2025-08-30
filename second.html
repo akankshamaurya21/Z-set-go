@@ -1,0 +1,13 @@
+<div id="header"></div>
+<div class="content">This is page 1 content.</div>
+<div id="footer"></div>
+
+<script>
+    // Load header and footer dynamically
+    fetch('Navbar.html')
+    .then(response => response.text())  // Wait for the response and convert it to text
+    .then(data => document.getElementById("navbar").innerHTML = data);
+    fetch('Footer.html')
+    .then(response => response.text())  // Wait for the response and convert it to text
+    .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
